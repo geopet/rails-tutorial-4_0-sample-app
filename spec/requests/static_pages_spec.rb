@@ -9,6 +9,7 @@ describe "Static pages" do
     it { should have_content('Sample App') }
     it { should have_title("Ruby on Rails 4.0 Tutorial") }
     it { should_not have_title('| Home') }
+    it { should have_link('Sign up', href: signup_path) }
   end
 
   describe "Help page" do
