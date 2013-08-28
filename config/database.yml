@@ -3,7 +3,7 @@ development:
   host: localhost
   database: sample-app-dev
 
-test:
+test: &test
   adapter: postgresql
   host: localhost
   database: sample-app-test
@@ -13,3 +13,6 @@ production:
   host: localhost
   username: user
   database: sample-app-production
+
+cucumber:
+  <<: *test
